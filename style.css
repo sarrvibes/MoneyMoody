@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fcd1e5;
+  --bg-input: #ffcad4;
+  --text-primary: #ff5d8f;
+  --text-secondary: #f72b68;
+  --border-color: #ff5d8f;
+  --accent-primary: #ff7096;
+  --accent-hover: #fae0e4;
+}
+
+body {
+  background-image: url(bg.png);
+  background-size: cover;        /* atau contain */
+  background-position: center;   /* atau top, bottom, left, right */
+  background-repeat: no-repeat;
+
+  /* background-color: var(--bg-primary); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--bg-secondary);
+  padding: 30px;
+  border-radius: 15px;
+}
+.container:hover{
+transition: all 0.3s ease;
+box-shadow: 0 4px 20px rgba(247, 43, 104, 0.486);
+box-shadow: 0 4px 20px rgba(247, 43, 104, 0.486);
+}
+
+h1 {
+  text-align: center;
+  color: var(--text-primary);
+}
+.mini-text{
+    font-size: medium;
+    color: var(--text-primary);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-secondary);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.button-wrapper{
+  display: flex;
+  justify-content: center; /* horizontal */
+  margin-top: 20px;
+}
+
+button {
+  width: 50%;
+  display: flex;
+  justify-content: center; /* horizontal */
+  padding: 12px;
+  background-color: var(--accent-primary);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+  color:var(--accent-primary) ;
+  transform: translateY(-2px);
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+}
