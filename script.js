@@ -8,7 +8,7 @@ window.addEventListener("load", fetchCurrencies)
 converterForm.addEventListener("submit", convertCurrency)
 
 async function fetchCurrencies() {
-    const response = await fetch("https://open.er-api.com/v6/latest/USD");
+    const response = await fetch("https://api.frankfurter.dev/v1/latest?");
     const data = await response.json();
 
     console.log(data)
@@ -38,11 +38,11 @@ async function convertCurrency(e) {
     return
     }
 
-    const response = await fetch(`https://open.er-api.com/v6/latest/USD${fromCurrencyValue}`)
+    const response = await fetch(`https://api.frankfurter.app/latest?amount=${amount}&from=${fromCurrencyValue}&to=${toCurrencyValue}`);
     const data = await response.json()
 
     const rate = data.rates[toCurrencyValue]
     const convertedAmount = (amount*rate).toFixed(2)
 
-    resultDiv.textContent = `${amount} ${fromCurrencyValue} = ${convertedAmount} ${toCurrencyValue}`
+    resultDiv.textContent = `${amount} ${fromCurrencyValue} = ${convertedAmount} ${toCurrencyValue}`;
 }
